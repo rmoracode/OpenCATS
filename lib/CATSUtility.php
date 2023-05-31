@@ -105,7 +105,7 @@ class CATSUtility
         $data = @file_get_contents('.svn/entries');
 
         /* XML Data? */
-        if ($data{0} === '<')
+        if ($data[0] === '<')
         {
             $xml = @simplexml_load_string($data);
             if (!$xml || !isset($xml->entry[0]['committed-rev']))
