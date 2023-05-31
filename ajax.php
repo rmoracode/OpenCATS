@@ -48,12 +48,6 @@ header('Expires: Mon, 26 Jul 1997 05:00:00 GMT');
 
 /* Make sure we aren't getting screwed over by magic quotes. */
 
-if (get_magic_quotes_gpc())
-{
-    $_GET     = array_map('stripslashes', $_GET);
-    $_POST    = array_map('stripslashes', $_POST);
-    $_REQUEST = array_map('stripslashes', $_REQUEST);
-}
 
 if (!isset($_REQUEST['f']) || empty($_REQUEST['f']))
 {
