@@ -119,7 +119,7 @@ class CATSUtility
         /* If the data is not XML, there is a version number at the first
          * character of the string. We can handle versions 7 and 8.
          */
-        if ((int) $data{0} > 6 && (int) $data{0} < 9)
+        if ((int) $data[0] > 6 && (int) $data[0] < 9)
         {
             /* Return the text between the end of the first "dir" line and
              * the next linefeed.
